@@ -1,3 +1,4 @@
+<h4>Настройка телеграм бота</h4>
 Вы должны иметь телеграм бота, а именно "HTTP API" это ваш TOKEN и chat_id, если его у Вас нет, порядок создания:
 Открываете телеграм
 В поиске ищете @botFather
@@ -16,7 +17,7 @@ botFather даст Вам HTTP API  вида
 
 находим '"from":{"id":1410371666,', ваш id_chat: 1410371666
 
-  Открытие rpc ноды
+  <h4>Открытие rpc ноды</h4>
 
 nano ~/.haqqd/config/config.toml
 в разделе [rpc] (примерно 109 строка)
@@ -76,7 +77,7 @@ pipenv run python run_setup.py
 должно выйти Node monitor (Moniker) started.
 
 создаем сервисный файл для запуска в фоновом режиме:
-  
+<code>  
     printf "[Unit]
     Description=P.A.N.I.C.
     After=network.target
@@ -92,7 +93,7 @@ pipenv run python run_setup.py
   
     [Install]
     WantedBy=multi-user.target" > /etc/systemd/system/panic.service 
-   
+ </code>
   
 Запускаем и смотрим логи:
   sudo systemctl daemon-reload
