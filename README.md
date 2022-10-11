@@ -41,9 +41,9 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 
 Клонируем репозиторий:<br>
 <i>cd</i><br>
-<i>git clone https://github.com/tarabukinvanya739/tarpanic<i/><br>
-<i/>cd tarpanic<i/><br>
-<i/>git checkout master<i/><br>
+<i>git clone https://github.com/tarabukinvanya739/tarpanic</i><br>
+<i>cd tarpanic</i><br>
+<i>git checkout master</i><br>
 <br>
 обновляем pip и запускаем установку<br>
 
