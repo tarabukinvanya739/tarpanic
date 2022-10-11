@@ -102,13 +102,12 @@ pipenv run python run_setup.py<br><br>
  </code>
   <br>
 Запускаем и смотрим логи:<br>
-<code>
   
-  sudo systemctl daemon-reload
-  sudo systemctl enable panic
-  sudo systemctl start panic
-  sudo journalctl -u panic -f
+  sudo systemctl daemon-reload<br>
+  sudo systemctl enable panic<br>
+  sudo systemctl start panic<br>
+  sudo journalctl -u panic -f<br>
   
-</code>
+
   <br>
 Здесь тоже должно выйти "Node monitor (Moniker) started"
