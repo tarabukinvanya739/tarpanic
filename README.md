@@ -66,7 +66,7 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 <i>nano config/user_config_nodes.ini</i><br>
 в строке 2 вводим свой moniker<br>
 в строке 3 вводим rpc своей ноды, например<br>
-<i>node_rpc_url = http://<ip>:26657</i><br>
+<i>node_rpc_url = http://[ip]:26657</i><br>
 <br><br>
   Установка:<br>
   обновляем pip и запускаем установку<br>
