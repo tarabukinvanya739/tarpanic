@@ -113,3 +113,5 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 
   <br>
 Здесь тоже должно выйти "Node monitor (Moniker) started"
+![panicstatus](https://user-images.githubusercontent.com/103162231/195004180-8e0e48b2-57f5-49f7-9dcf-e1181c12b96c.png)
+Теперь в боте будут приходить уведомления, если с ботом что-то не так.
