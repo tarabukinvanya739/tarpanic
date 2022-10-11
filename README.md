@@ -55,7 +55,7 @@ bot_chat_id = <id_chat>
 nano config/user_config_nodes.ini
 в строке 2 вводим свой moniker
 в строке 3 вводим rpc своей ноды, например
-node_rpc_url = 201.144.152.196:26657
+node_rpc_url = http://<ip>:26657
 
 pipenv update
 pipenv run python run_setup.py
@@ -63,4 +63,7 @@ pipenv run python run_setup.py
 отвечаем 5 раз n, потом когда спрасит "Telegram commands are already set up. Do you wish to clear the current config? (Y/n)" отвечаем Y
 потом n, n, n, n
 
+/usr/local/bin/pipenv run python /root/tarpanic/run_alerter.py
 
+нода
+nano ~/.haqqd/config/config.toml
