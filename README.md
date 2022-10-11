@@ -81,7 +81,7 @@ pipenv run python run_setup.py
 <code>
   
     printf "[Unit]
-    Description=P.A.N.I.C.
+    Description=BOT
     After=network.target
     StartLimitIntervalSec=0
 
