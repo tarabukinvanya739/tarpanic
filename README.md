@@ -19,11 +19,11 @@ botFather даст Вам HTTP API  вида <br>
 
   <h4>Открытие rpc ноды</h4>
 
-nano ~/.haqqd/config/config.toml<br>
+<i>nano ~/.haqqd/config/config.toml</i><br>
 в разделе [rpc] (примерно 109 строка)<br>
 поменять laddr = "tcp://127.0.0.1:26657" на laddr = "tcp://0.0.0.0:26657"<br>
 И перезагружаем ноду<br>
-sudo systemctl restart haqq<br>
+<i>sudo systemctl restart haqq</i><br>
   
   <h4>Установка PANIC BOT</h4>
 
@@ -35,47 +35,48 @@ python3 --version<br>
 sudo apt-get install python3-pip redis-server -y<br><br>
 
 Устанавливаем Pipenv и включаем Redis<br>
-sudo pip3 install pipenv<br>
-sudo systemctl enable redis-server.service<br><br>
+<i>sudo pip3 install pipenv</i><br>
+<i>sudo systemctl enable redis-server.service</i><br><br>
 
 
-<i>cd<i><br>
-<i>git clone https://github.com/tarabukinvanya739/tarpanic<i><br>
-<i>cd tarpanic<i><br>
-<i>git checkout master<i><br>
+<i>cd</i><br>
+<i>git clone https://github.com/tarabukinvanya739/tarpanic<i/><br>
+<i/>cd tarpanic<i/><br>
+<i/>git checkout master<i/><br>
 
 <br><br>
 обновляем pip и запускаем установку<br>
 
 сразу настроим конфиги вручную:<br>
-nano config/user_config_main.ini<br>
+<i>nano config/user_config_main.ini</i><br>
 Исправляем строчки<br>
 строка1 - любое имя вместо Name:<br>
-unique_alerter_identifier = Name <br>
+<i>unique_alerter_identifier = Name </i><br>
 строка6 - ставим TOKEN с телеграм бота:<br>
-bot_token = [TOKEN] <br>
+<i>bot_token = [TOKEN]</i> <br>
 строка7 - ставим id_chat с телеграм бота<br>
-bot_chat_id = [id_chat]<br>
+<i>bot_chat_id = [id_chat]</i><br>
 строка32 - ставим TOKEN с телеграм бота:<br>
-bot_token = [TOKEN]<br>
+<i>bot_token = [TOKEN]</i><br>
 строка33 - ставим id_chat с телеграм бота<br>
-bot_chat_id = [id_chat]<br><br>
+<i>bot_chat_id = [id_chat]</i><br><br>
 
 сохраняемся и закрываем, CTRL+X,Y<br>
 <br>
-nano config/user_config_nodes.ini<br>
+<i>nano config/user_config_nodes.ini</i><br>
 в строке 2 вводим свой moniker<br>
 в строке 3 вводим rpc своей ноды, например<br>
-node_rpc_url = http://<ip>:26657<br>
+<i>node_rpc_url = http://<ip>:26657</i><br>
 <br><br>
-pipenv update<br>
-pipenv run python run_setup.py<br><br>
+  Установка:
+<i>pipenv update</i><br>
+<i>pipenv run python run_setup.py</i><br><br>
 
 отвечаем 5 раз n, потом когда спрасит "Telegram commands are already set up. Do you wish to clear the current config? (Y/n)" отвечаем Y
 потом n, n, n, n
 <br><br>
 проверяем запуск:<br>
-/usr/local/bin/pipenv run python /$USER/tarpanic/run_alerter.py<br>
+<i>/usr/local/bin/pipenv run python /$USER/tarpanic/run_alerter.py</i><br>
 
 должно выйти Node monitor (Moniker) started.<br><br>
 
