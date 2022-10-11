@@ -16,7 +16,14 @@ botFather даст Вам HTTP API  вида
 
 находим '"from":{"id":1410371666,', ваш id_chat: 1410371666
 
-Установка PANIC BOT
+  Открытие rpc ноды
+
+nano ~/.haqqd/config/config.toml
+в разделе [rpc] (примерно 109 строка)
+поменять laddr = "tcp://127.0.0.1:26657" на laddr = "tcp://0.0.0.0:26657"
+И перезагружаем ноду
+  
+  <h4>Установка PANIC BOT</h4>
 
 Проверяем, есть ли на сервере python
 python3 --version
@@ -63,7 +70,34 @@ pipenv run python run_setup.py
 отвечаем 5 раз n, потом когда спрасит "Telegram commands are already set up. Do you wish to clear the current config? (Y/n)" отвечаем Y
 потом n, n, n, n
 
-/usr/local/bin/pipenv run python /root/tarpanic/run_alerter.py
+проверяем запуск:
+/usr/local/bin/pipenv run python /$USER/tarpanic/run_alerter.py
 
-нода
-nano ~/.haqqd/config/config.toml
+должно выйти Node monitor (Moniker) started.
+
+создаем сервисный файл для запуска в фоновом режиме:
+  
+    printf "[Unit]
+    Description=P.A.N.I.C.
+    After=network.target
+    StartLimitIntervalSec=0
+
+    [Service]
+    Type=simple
+    Restart=always
+    User=$USER
+    TimeoutStopSec=90s
+    WorkingDirectory=/$USER/tarpanic
+    ExecStart=/usr/local/bin/pipenv run python /$USER/tarpanic/run_alerter.py
+  
+    [Install]
+    WantedBy=multi-user.target" > /etc/systemd/system/panic.service 
+   
+  
+Запускаем и смотрим логи:
+  sudo systemctl daemon-reload
+  sudo systemctl enable panic
+  sudo systemctl start panic
+  sudo journalctl -u panic -f
+  
+Здесь тоже должно выйти "Node monitor (Moniker) started"
