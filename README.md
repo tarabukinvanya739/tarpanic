@@ -39,7 +39,7 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 <i>sudo pip3 install pipenv</i><br>
 <i>sudo systemctl enable redis-server.service</i><br>
 
-Клонируем репозиторий:
+Клонируем репозиторий:<br>
 <i>cd</i><br>
 <i>git clone https://github.com/tarabukinvanya739/tarpanic<i/><br>
 <i/>cd tarpanic<i/><br>
