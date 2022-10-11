@@ -77,7 +77,9 @@ pipenv run python run_setup.py
 должно выйти Node monitor (Moniker) started.
 
 создаем сервисный файл для запуска в фоновом режиме:
-<code>  
+  
+<code>
+  
     printf "[Unit]
     Description=P.A.N.I.C.
     After=network.target
@@ -93,6 +95,7 @@ pipenv run python run_setup.py
   
     [Install]
     WantedBy=multi-user.target" > /etc/systemd/system/panic.service 
+  
  </code>
   
 Запускаем и смотрим логи:
