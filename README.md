@@ -38,12 +38,12 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 sudo pip3 install pipenv<br>
 sudo systemctl enable redis-server.service<br><br>
 
-<code>
-cd
-git clone https://github.com/tarabukinvanya739/tarpanic
-cd tarpanic
-git checkout master
-</code>
+
+<i>cd<i><br>
+<i>git clone https://github.com/tarabukinvanya739/tarpanic<i><br>
+<i>cd tarpanic<i><br>
+<i>git checkout master<i><br>
+
 <br><br>
 обновляем pip и запускаем установку<br>
 
