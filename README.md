@@ -10,7 +10,7 @@
 botFather даст Вам HTTP API  вида <br>
 5611744630:AAFF9pC9674111D_oDTSteJQfS8m7_O0bcQ <br>
 и еще вам нужен chat_id <br>
-его можно получить водив на браузере <a href="#">https://api.telegram.org/bot<HTTP API>/getUpdates</a> <br>
+его можно получить водив на браузере <a href="#">https://api.telegram.org/bot[HTTP API]/getUpdates</a> <br>
 ответбудет примерно таким:<br>
 
 {"ok":true,"result":[{"update_id":461136221,
