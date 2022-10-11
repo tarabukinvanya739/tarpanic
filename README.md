@@ -45,7 +45,7 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 <i>cd tarpanic</i><br>
 <i>git checkout master</i><br>
 <br>
-обновляем pip и запускаем установку<br>
+
 
 сразу настроим конфиги вручную:<br>
 <i>nano config/user_config_main.ini</i><br>
@@ -68,7 +68,8 @@ sudo apt-get install python3-pip redis-server -y<br><br>
 в строке 3 вводим rpc своей ноды, например<br>
 <i>node_rpc_url = http://<ip>:26657</i><br>
 <br><br>
-  Установка:
+  Установка:<br>
+  обновляем pip и запускаем установку<br>
 <i>pipenv update</i><br>
 <i>pipenv run python run_setup.py</i><br><br>
 
