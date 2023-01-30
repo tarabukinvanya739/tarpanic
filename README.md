@@ -1,23 +1,6 @@
 ##Настройка телеграм бота
-Вы должны иметь телеграм бота, а именно "HTTP API" и chat_id, если его у Вас нет, порядок создания:<br>
-"HTTP API" - это ваш TOKEN <br>
-Открываете телеграм<br>
-В поиске ищете @botFather<br>
-присоединяетесь<br>
-Вводите /newbot <br>
-Придумываете имя бота на латинском и должен заканчиваться на _bot <br>
-Например, haqq_marina_bot <br>
-botFather даст Вам HTTP API  вида <br>
-5611744630:AAFF9pC9674111D_oDTSteJQfS8m7_O0bcQ <br>
-и еще вам нужен chat_id <br>
-его можно получить водив на браузере <a href="#">https://api.telegram.org/bot[HTTP API]/getUpdates</a> <br>
-ответбудет примерно таким:<br>
-
-{"ok":true,"result":[{"update_id":461136221,
-"message":{"message_id":5,"from":{"id":1410371666,"is_bot":false,"first_name":"\u0410\u043d","last_name":"\u043c\u0438\u0441\u0441","username":"nadyatarabukina","language_code":"ru"},"chat":{"id":1410371666,"first_name":"\u0410\u043d","last_name":"\u043c\u0438\u0441\u0441","username":"nadyatarabukina","type":"private"},"date":1665454393,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}},{"update_id":461136222,<br>
-
-находим '"from":{"id":1410371666,', ваш id_chat: 1410371666<br>
-
+Вы должны иметь телеграм бота, а именно "HTTP API" и chat_id, если его у Вас нет, то:<br>
+https://tarabukinivan.medium.com/%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC-%D0%B1%D0%BE%D1%82%D0%B0-%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-id-chat-eddb844c6126
   <h4>Открытие rpc ноды</h4>
 
 <i>nano ~/.haqqd/config/config.toml</i><br>
